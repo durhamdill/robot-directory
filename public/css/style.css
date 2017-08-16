@@ -43,4 +43,15 @@ h2 {
 .avatar-circle {
   border: 1px solid lightgray;
   border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 10px;
+}
+
+th, td {
+  padding: 5px 30px 5px 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  text-align: right;
 }

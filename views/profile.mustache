@@ -11,16 +11,37 @@
     <div>
 
         <img class="avatar-circle" src="{{avatar}}" alt="">
-        <h2>{{name}}</h2>
-        <p>{{address.city}}, {{address.country}} |
-        {{#job}}
-          {{job}}, {{company}}
-        {{/job}}
-        {{^job}}
-          Available for hire!
-        {{/job}}
-        </p>
-        <p>{{email}} | {{phone}}</>
+
+        <div class="profile-info">
+          <h2>{{name}}</h2>
+          <p>{{#address.city}}{{address.city}},{{/address.city}} {{address.country}} |
+          {{#job}}
+            {{job}}, {{company}}
+          {{/job}}
+          {{^job}}
+            Available for hire!
+          {{/job}}
+          </p>
+          <p>{{email}} | {{phone}}</>
+        </div>
+
+        <table>
+          {{#university}}
+          <tr>
+            <th>Education</th>
+            <td>{{university}}</td>
+          </tr>
+          {{/university}}
+
+
+          <tr>
+            <th>Skills</th>
+            {{#skills}}
+            <td>{{skills}}</td>
+            {{/skills}}
+          </tr>
+
+        </table>
 
     </div>
 
