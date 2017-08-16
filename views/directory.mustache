@@ -11,7 +11,12 @@
           {{#users}}
             <img src="{{avatar}}" alt="">
             <h2>{{name}}</h2>
-            <p>{{job}}, {{company}}</p>
+            {{#job}}
+              <p>{{job}}, {{company}}</p>
+            {{/job}}
+            {{^job}}
+              <p>Available for hire!</p>
+            {{/job}}
           {{/users}}
         </div>
 
